@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ExamenU1</string>
+    <string name="title">Convertidor de grados</string>
+    <string name="C">°C</string>
+    <string name="F">°F</string>
+    <string name="K">°K</string>
+    <string name="btnC">°C</string>
+    <string name="btnF">°F</string>
+    <string name="btnK">°K</string>
+    <string name="hC">Grados centígrados</string>
+    <string name="hF">Grados fahrenheit</string>
+    <string name="hK">Grados kelvin</string>
 </resources>
