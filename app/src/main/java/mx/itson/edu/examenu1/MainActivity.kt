@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             } else if(isInputF(c, f, k)){
                 val r = FK(f.text.toString().toDouble())
                 resultado.text = String.format("%.2f °K", r)
-            } else resultado.text = "Ingrese un solo valor a convertir diferente de °k"
+            } else resultado.text = "Ingrese un solo valor a convertir diferente de °K"
         }
 
         btnClean.setOnClickListener {
@@ -72,32 +72,36 @@ class MainActivity : AppCompatActivity() {
 }
 
 // Funciones para las distintas conversiones de grados
-// °C a °F
+/**
+ * °C a °F
+ */
 fun CF(c: Double) = c * 1.8 + 32
-// °F a °C
+/**
+ * °F a °C
+ */
 fun FC(f: Double) = (f - 32) / 1.8
-
-// °C a °K
+/**
+ * °C a °K
+ */
 fun CK(c: Double) = c + 273.15
-// °K a °C
+/**
+ * °K a °C
+ */
 fun KC(k: Double) = k - 273.15
-
-// °F a °K
+/**
+ * °F a °K
+ */
 fun FK(f: Double) = 5 * (f - 32) / 9 + 273.15
-// °K a °F
+
+/**
+ * °K a °F
+ */
 fun KF(k: Double) = 9 * (k - 273.15) / 5 + 32
 
 // Funciones adicionales para validar la entrada de datos
-// Verifica si hay una sola entrada con algún valor
-fun checkInput(inputC: EditText, inputF: EditText, inputK: EditText): Boolean {
-
-    val checkC = isInputC(inputC, inputF, inputK)
-    val checkF = isInputF(inputC, inputF, inputK)
-    val checkK = isInputK(inputC, inputF, inputK)
-
-    return checkC || checkF || checkK
-}
-
+/**
+ * Verifica si existe una única entrada de grados Celsius.
+ */
 fun isInputC(inputC: EditText, inputF: EditText, inputK: EditText): Boolean{
     val c = inputC.text.isNullOrBlank()
     val f = inputF.text.isNullOrBlank()
@@ -105,7 +109,9 @@ fun isInputC(inputC: EditText, inputF: EditText, inputK: EditText): Boolean{
 
     return !c && f && k // Único valor en °C
 }
-
+/**
+ * Verifica si existe una única entrada de grados Fahrenheit.
+ */
 fun isInputF(inputC: EditText, inputF: EditText, inputK: EditText): Boolean{
     val c = inputC.text.isNullOrBlank()
     val f = inputF.text.isNullOrBlank()
@@ -113,7 +119,9 @@ fun isInputF(inputC: EditText, inputF: EditText, inputK: EditText): Boolean{
 
     return c && !f && k // Único valor en °F
 }
-
+/**
+ * Verifica si existe una única entrada de grados Kelvin.
+ */
 fun isInputK(inputC: EditText, inputF: EditText, inputK: EditText): Boolean{
     val c = inputC.text.isNullOrBlank()
     val f = inputF.text.isNullOrBlank()
