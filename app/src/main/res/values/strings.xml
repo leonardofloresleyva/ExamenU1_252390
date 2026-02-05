@@ -10,4 +10,6 @@
     <string name="hC">Grados centígrados</string>
     <string name="hF">Grados fahrenheit</string>
     <string name="hK">Grados kelvin</string>
+    <string name="clean">Limpiar</string>
+    <string name="resultado">Resultado:</string>
 </resources>

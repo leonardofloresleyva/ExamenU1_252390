@@ -6,24 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/science"
+    android:backgroundTint="#B3000000"
+    android:backgroundTintMode="src_over"
     tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/btnGK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:background="@color/black"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/btnK"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:cornerRadius="@dimen/cardview_default_radius"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnGF"
-        app:layout_constraintStart_toEndOf="@+id/btnGF" />
 
     <EditText
         android:id="@+id/etC"
@@ -44,43 +29,39 @@
         app:layout_constraintTop_toBottomOf="@+id/tvCD"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/btnGF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="60dp"
-        android:background="@color/black"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/btnF"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:cornerRadius="@dimen/cardview_default_radius"
-        app:layout_constraintStart_toEndOf="@+id/btnGC"
-        app:layout_constraintTop_toBottomOf="@+id/etK" />
-
     <TextView
         android:id="@+id/tvCD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
         android:fontFamily="@font/adamina"
         android:text="@string/title"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/tvC"
+        app:layout_constraintStart_toStartOf="@+id/tvC"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/adamina"
+        android:text="@string/C"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etC"
+        app:layout_constraintEnd_toStartOf="@+id/etC" />
 
     <EditText
         android:id="@+id/etF"
         android:layout_width="135dp"
         android:layout_height="48dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="88dp"
         android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="@string/hF"
@@ -107,53 +88,6 @@
         app:layout_constraintStart_toStartOf="@+id/tvK" />
 
     <TextView
-        android:id="@+id/tvC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#FFFFFF"
-        android:fontFamily="@font/adamina"
-        android:text="@string/C"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/etC"
-        app:layout_constraintEnd_toStartOf="@+id/etC" />
-
-    <EditText
-        android:id="@+id/etK"
-        android:layout_width="135dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/white"
-        android:ems="10"
-        android:hint="@string/hK"
-        android:inputType="numberDecimal"
-        android:textColor="@color/white"
-        android:textColorHint="#686868"
-        android:textSize="11sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etF" />
-
-    <Button
-        android:id="@+id/btnGC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:background="@color/black"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/btnC"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textColorLink="@color/black"
-        android:textSize="16sp"
-        app:cornerRadius="@dimen/cardview_default_radius"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnGF"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/tvK"
         android:layout_width="0dp"
         android:layout_height="27dp"
@@ -166,5 +100,131 @@
         app:layout_constraintEnd_toEndOf="@+id/tvC"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tvC" />
+
+    <EditText
+        android:id="@+id/etK"
+        android:layout_width="135dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="@string/hK"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="#686868"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etF" />
+
+    <Button
+        android:id="@+id/btnGF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/btnF"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textColorLink="@color/black"
+        android:textSize="16sp"
+        app:cornerRadius="@dimen/cardview_default_radius"
+        app:layout_constraintStart_toEndOf="@+id/btnGC"
+        app:layout_constraintTop_toBottomOf="@+id/etK" />
+
+    <Button
+        android:id="@+id/btnGC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="276dp"
+        android:background="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/btnC"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textColorLink="@color/black"
+        android:textSize="16sp"
+        app:cornerRadius="@dimen/cardview_default_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultadoLabel" />
+
+    <Button
+        android:id="@+id/btnGK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="276dp"
+        android:background="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/btnK"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textColorLink="@color/black"
+        android:textSize="16sp"
+        app:cornerRadius="@dimen/cardview_default_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGF"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultado" />
+
+    <Button
+        android:id="@+id/btnClean"
+        android:layout_width="87dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="156dp"
+        android:background="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/clean"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textColorLink="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="@dimen/cardview_default_radius"
+        app:layout_constraintStart_toEndOf="@+id/btnGC"
+        app:layout_constraintTop_toBottomOf="@+id/etK" />
+
+    <TextView
+        android:id="@+id/tvResultadoLabel"
+        android:layout_width="78dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="355dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/resultado"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnGC"
+        app:layout_constraintEnd_toStartOf="@+id/tvResultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="347dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTintMode="multiply"
+        android:fontFamily="@font/adamina"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvResultadoLabel"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
